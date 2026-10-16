@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+qa/
+outputs/
+*.docx
+*.pdf
+*.zip
+!tests/fixtures/
