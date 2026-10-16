@@ -1,0 +1,25 @@
+{
+  "page": {"width": 595.3, "height": 841.9, "top": 72, "bottom": 72, "left": 90, "right": 90},
+  "format": {
+    "body": {"font": "宋体", "latin": "Times New Roman", "size": 12, "align": "justify", "line_spacing": 1.5, "first_line_indent": 24},
+    "chapter": {"font": "黑体", "latin": "Times New Roman", "size": 16, "bold": true, "align": "center", "line_exact": 32, "new_page": true},
+    "h2": {"font": "黑体", "latin": "Times New Roman", "size": 16, "bold": true, "space_before": 7.8, "space_after": 3.1},
+    "h3": {"font": "黑体", "latin": "Times New Roman", "size": 15, "bold": true},
+    "caption": {"font": "宋体", "latin": "Times New Roman", "size": 10.5, "align": "center", "space_before": 2, "space_after": 3}
+  },
+  "toc": {"layout": "two-column", "title": "目录 · Contents", "split_after": 3, "size": 10.5, "line": 16.5, "gap": 24},
+  "headers": {"odd": "chapter", "even": "合成测试文档", "first_page_blank": true, "format": {"font": "宋体", "latin": "Times New Roman", "size": 9, "color": "000000", "bold": false}},
+  "blocks": [
+    {"type": "heading", "role": "chapter", "text": "第 6 章 数学与表格测试"},
+    {"type": "heading", "role": "h2", "text": "6.1 可编辑数学"},
+    {"type": "paragraph", "runs": [{"text": "这是不含任何原稿内容的公开合成示例。行内公式："}, {"math": "x_i^2"}, {"text": "。所有公式均应能在 Word 中编辑。"}]},
+    {"type": "equation", "latex": "h_i^{l+1}=\\sigma\\left(W h_i+\\sum_{j\\in\\mathcal N(i)}\\alpha_{ij}W h_j\\right)", "number": "6.16", "force_below": true},
+    {"type": "equation", "latex": "\\log p(x)=\\log p(z)+\\log\\left|\\det\\frac{\\partial f^{-1}(x)}{\\partial x}\\right|", "number": "6.21"},
+    {"type": "heading", "role": "h3", "text": "6.1.1 三线表"},
+    {"type": "table", "caption": "表 6-1 合成结果", "three_line": true, "widths": [100, 150, 165.3], "rows": [["方法", "特点", "结果"], ["方法 A", "原生可编辑公式", "需要渲染检查"], ["方法 B", "真实三线边框", "不使用截图"]]},
+    {"type": "heading", "role": "chapter", "text": "第 7 章 第二章测试"},
+    {"type": "heading", "role": "h2", "text": "7.1 编号与页眉"},
+    {"type": "paragraph", "text": "章号采用阿拉伯数字。奇数页章名右对齐，偶数页书名左对齐。此段仅为公开合成测试材料。"},
+    {"type": "equation", "latex": "L=\\frac1N\\sum_{i=1}^{N}(y_i-\\hat y_i)^2", "number": "7.1"}
+  ]
+}
