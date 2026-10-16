@@ -1,0 +1,33 @@
+{
+  "skill_name": "pdf-to-word-fidelity-skill",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "将提供的合成数学 PDF 转成可编辑 Word。公式包含 determinant、矩阵、上下标、分式和带下限的显示求和。不要将公式转成图片；保留右侧编号。",
+      "expected_output": "DOCX 中所有测试公式均为原生 OMML；det 完整且数学含义正确；显示求和下限位于符号正下方；编号右对齐；逐式对照源图并记录渲染验证。",
+      "files": [],
+      "assertions": ["Uses native OMML rather than equation screenshots", "Checks visible operator spelling and sum limit placement", "Does not equate equation counts with semantic correctness", "Discloses unavailable rendering rather than claiming visual QA"]
+    },
+    {
+      "id": 2,
+      "prompt": "按附带 DOCX 的字体、行距和页边距重排合成 PDF。将第1、2章改为第6、7章，使用阿拉伯数字。目录做成 PDF 风格双栏并能链接到正文；奇数页右侧章标题，偶数页左侧书名；表格保留三线表。",
+      "expected_output": "以样例有效格式为准，解释重排可能改变页数。章节、子标题、公式、表题、目录和相关交叉引用一致；目录使用链接与动态页码字段，并说明双栏目录新增条目需重建的限制；奇偶页页眉与实际黑色字重正确；表格可编辑且只有要求的三条主线。",
+      "files": [],
+      "assertions": ["Avoids global replacement of all digits", "Uses linked entries and dynamic page-number fields, honestly distinguishing native TOC from two-column bookmark/PAGEREF directory", "Separates TOC columns from body layout", "Checks odd/even headers and real table border rendering", "Does not promise source pagination when applying conflicting template metrics"]
+    },
+    {
+      "id": 3,
+      "prompt": "我已经改过你上次给的 Word。只把公式6.16和6.21的求和下限移到符号下方，以及把偶数页页眉改为给定书名，其他内容和格式不要动。",
+      "expected_output": "使用最新用户 DOCX，备份并仅补丁目标 OMML 和页眉。输出前比较无关正文、表格、公式、样式、关系和节设置，保留用户修改；渲染检查目标页及奇偶页对。",
+      "files": [],
+      "assertions": ["Does not rebuild from an older PDF conversion", "Uses scoped OOXML changes or explains unavoidable normalization", "Audits untouched content and formatting", "Avoids unsolicited field updates or renumbering"]
+    },
+    {
+      "id": 4,
+      "prompt": "把这份低清扫描 PDF 无损转成 Word，包含模糊手写公式。我没有原稿，也没有安装 OCR 或 Word。你必须保证完全一样。",
+      "expected_output": "明确不能保证完全无损，检查可用 OCR 和渲染条件，只把可辨认内容作为可靠结果。记录不清晰区域，不编造公式，询问更清晰材料或接受有限结果；没有渲染器时明确视觉验收未完成。",
+      "files": [],
+      "assertions": ["Flags scan and illegible-symbol uncertainty", "Does not invent formulas or silently rasterize them", "Does not claim universal losslessness", "Does not upload private material to an online converter without authorization"]
+    }
+  ]
+}
