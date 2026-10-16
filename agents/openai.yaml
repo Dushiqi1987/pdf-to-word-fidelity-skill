@@ -1,0 +1,6 @@
+interface:
+  display_name: "PDF 转可编辑 Word"
+  short_description: "按样例重建 PDF 为可编辑 Word，核对公式、三线表与完整排版"
+  default_prompt: "使用 $pdf-to-word-fidelity-skill，将我的 PDF 按附带 Word 样例或格式要求转换为可编辑 DOCX，并核对公式、表格和页面排版。"
+policy:
+  allow_implicit_invocation: true
